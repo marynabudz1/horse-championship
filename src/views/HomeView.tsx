@@ -106,6 +106,7 @@ const startPauseLabel = computed(() =>
         const round = currentRound.value
         if (!round) return
         store.dispatch(RaceActions.SET_STATUS, RaceStatus.Running)
+        activeMobileTab.value = MobileTab.Track
         startAnimation(round, horses.value, handleRoundComplete)
       } else if (currentStatus === RaceStatus.Running) {
         store.dispatch(RaceActions.SET_STATUS, RaceStatus.Paused)
