@@ -48,7 +48,7 @@ export default defineComponent({
       return schedule.value[currentRoundIndex.value] ?? null
     })
 
-    const startPauseLabel = computed(() =>
+const startPauseLabel = computed(() =>
       raceStatus.value === RaceStatus.Running ? 'PAUSE' : 'START',
     )
 

@@ -74,7 +74,9 @@ export function useRaceAnimation() {
     if (allFinished) {
       animationState.rafId = null
       if (animationState.onComplete) {
-        animationState.onComplete(buildResults(horseProgressList.value))
+        const results = buildResults(horseProgressList.value)
+        horseProgressList.value = []
+        animationState.onComplete(results)
         animationState.onComplete = null
       }
       return
@@ -129,9 +131,10 @@ export function useRaceAnimation() {
       cancelAnimationFrame(animationState.rafId)
       animationState.rafId = null
     }
-    animationState.pausedAt    = null
-    animationState.pauseOffset = 0
-    animationState.onComplete  = null
+    animationState.pausedAt     = null
+    animationState.pauseOffset  = 0
+    animationState.onComplete   = null
+    horseProgressList.value     = []
   }
 
   // Cancel any in-flight RAF when the component that owns this composable unmounts
