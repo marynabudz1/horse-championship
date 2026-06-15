@@ -20,10 +20,10 @@ export default defineConfig({
       use:        { ...devices['Desktop Chrome'] },
     },
     {
-      // Mobile: runs only mobile.spec.ts with iPhone 13 viewport
+      // Mobile: runs only mobile.spec.ts with iPhone 13 viewport (Chromium-based for CI compatibility)
       name:      'mobile',
       testMatch: '**/mobile.spec.ts',
-      use:       { ...devices['iPhone 13'] },
+      use:       { ...devices['iPhone 13'], browserName: 'chromium' },
     },
   ],
 
