@@ -50,7 +50,7 @@ test.describe('Mobile layout', () => {
     await page.getByRole('button', { name: '📋 Program' }).click()
 
     await expect(mobileVisible(page, '1ST Lap - 1200m')).toBeVisible()
-    await expect(mobileVisible(page, '6ST Lap - 2200m')).toBeVisible()
+    await expect(mobileVisible(page, '6TH Lap - 2200m')).toBeVisible()
   })
 
   test('After a round completes it auto-navigates to Results tab', async ({ page }) => {

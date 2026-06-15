@@ -56,7 +56,7 @@ test.describe('Edge cases', () => {
   test('Program always has exactly 6 rounds after generating', async ({ page }) => {
     await page.getByRole('button', { name: 'GENERATE PROGRAM' }).click()
 
-    const roundLabels = ['1ST Lap', '2ST Lap', '3ST Lap', '4ST Lap', '5ST Lap', '6ST Lap']
+    const roundLabels = ['1ST Lap', '2ND Lap', '3RD Lap', '4TH Lap', '5TH Lap', '6TH Lap']
     for (const label of roundLabels) {
       await expect(page.locator(`text=${label}`).first()).toBeVisible()
     }

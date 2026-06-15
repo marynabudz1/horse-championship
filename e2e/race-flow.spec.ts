@@ -14,7 +14,7 @@ test.describe('Race flow', () => {
     await page.getByRole('button', { name: 'GENERATE PROGRAM' }).click()
 
     await expect(page.locator('text=1ST Lap - 1200m').first()).toBeVisible()
-    await expect(page.locator('text=6ST Lap - 2200m').first()).toBeVisible()
+    await expect(page.locator('text=6TH Lap - 2200m').first()).toBeVisible()
   })
 
   test('START button is disabled before generating a program', async ({ page }) => {

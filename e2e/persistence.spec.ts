@@ -10,7 +10,7 @@ test.describe('LocalStorage persistence', () => {
     await page.reload()
 
     await expect(page.locator('text=1ST Lap - 1200m').first()).toBeVisible()
-    await expect(page.locator('text=6ST Lap - 2200m').first()).toBeVisible()
+    await expect(page.locator('text=6TH Lap - 2200m').first()).toBeVisible()
   })
 
   test('Completed round results survive a page refresh', async ({ page }) => {
