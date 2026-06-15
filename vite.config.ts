@@ -4,6 +4,7 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 import { fileURLToPath, URL } from 'node:url'
 
 export default defineConfig({
+  base: process.env.GITHUB_ACTIONS ? '/horse-championship/' : '/',
   plugins: [vue(), vueJsx()],
   resolve: {
     alias: {
